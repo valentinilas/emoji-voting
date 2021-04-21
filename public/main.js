@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) => {
     const choice = document.querySelector('input[name=os]:checked').value;
     const data = { os: choice };
 
-    fetch('http://localhost:3000/poll', {
+    fetch('/poll', {
         method: 'post',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -14,7 +14,7 @@ form.addEventListener('submit', (event) => {
         })
     })
         .then(res => res.json())
-        .then(data =>  console.log(data))
+        .then(data => console.log(data))
         .catch(err => console.log(err));
 
     event.preventDefault();
@@ -22,7 +22,7 @@ form.addEventListener('submit', (event) => {
 
 // Print out results
 const results = document.getElementById('results');
-const showResults = (data) =>{
+const showResults = (data) => {
     results.insertAdjacentHTML('beforeend', data);
 }
 
@@ -31,11 +31,11 @@ const showResults = (data) =>{
 Pusher.logToConsole = true;
 
 var pusher = new Pusher('0c9be423f896addb0c91', {
-  cluster: 'eu'
+    cluster: 'eu'
 });
 
 var channel = pusher.subscribe('os-poll');
-channel.bind('os-vote', function(data) {
-//   alert(JSON.stringify(data));
-  showResults(data)
+channel.bind('os-vote', function (data) {
+    //   alert(JSON.stringify(data));
+    showResults(data)
 });
