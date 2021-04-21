@@ -17,6 +17,7 @@ const pusher = new Pusher({
 router.get('/',(req,res)=>{
     res.send('POLL');
 });
+
 router.post('/',(req, res)=>{
     pusher.trigger("os-poll", "os-vote", {
         points: 1,

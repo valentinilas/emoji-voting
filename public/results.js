@@ -15,5 +15,5 @@ var pusher = new Pusher('0c9be423f896addb0c91', {
 var channel = pusher.subscribe('os-poll');
 channel.bind('os-vote', function (data) {
     //   alert(JSON.stringify(data));
-    showResults(data)
+    showResults(JSON.stringify(data));
 });
