@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pusher Poll</title>
+
+</head>
+<body>
+    <h1>OS VOTE</h1>
+    <p>React:</p>
+    <form id="vote-form">
+        <p>
+            <input type="radio" name="os" id="option1" value="MyOption1">
+            <label for="option1">Option 1</label>
+        </p>
+        <p>
+            <input type="radio" name="os" id="option2" value="MyOption2">
+            <label for="option2">Option 2</label>
+        </p>
+        <input type="submit" value="vote" class="btn">
+
+    </form>
+
+    <div id="results">
+       <h3>Results go here</h3> 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.min.js" integrity="sha512-XVnzJolpkbYuMeISFQk6sQIkn3iYUbMX3f0STFUvT6f4+MZR6RJvlM5JFA2ritAN3hn+C0Bkckx2/+lCoJl3yg==" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>
