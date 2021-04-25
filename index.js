@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Body parer middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Enable cors
 app.use(cors());
@@ -25,5 +25,5 @@ const port = 3000;
 
 // Start server
 
-// app.listen(process.env.PORT, () => console.log(`Server started on port ${port}`));
-app.listen(3000, () => console.log(`Server started on port ${port}`));
+app.listen(process.env.PORT, () => console.log(`Server started on port ${port}`));
+// app.listen(3000, () => console.log(`Server started on port ${port}`));
