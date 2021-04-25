@@ -25,4 +25,5 @@ const port = 3000;
 
 // Start server
 
-app.listen(process.env.PORT, () => console.log(`Server started on port ${port}`));
+// app.listen(process.env.PORT, () => console.log(`Server started on port ${port}`));
+app.listen(3000, () => console.log(`Server started on port ${port}`));

@@ -1,31 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./main.css">
     <title>Pusher Poll</title>
 
 </head>
-<body>
-    <h1>OS VOTE</h1>
-    <p>React:</p>
-    <form id="vote-form">
-        <p>
-            <input type="radio" name="os" id="option1" value="MyOption1">
-            <label for="option1">Option 1</label>
-        </p>
-        <p>
-            <input type="radio" name="os" id="option2" value="MyOption2">
-            <label for="option2">Option 2</label>
-        </p>
-        <input type="submit" value="vote" class="btn">
 
-    </form>
+<body class="p-6">
+    <div class="container intro-container">
 
-    
+
+        <div class="columns">
+            <div class="column">
+                <h1 class="is-size-2 has-text-centered	mb-3">Send your reaction</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container emoji-container">
+
+
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-6-mobile ">
+                <div class="box">
+                    <input type="radio" name="os" id="option0" value="😊" checked>
+                    <label for="option0">😊</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option1" value="😎">
+                    <label for="option1">😎</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option2" value="😉">
+                    <label for="option2">😉</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option3" value="😁">
+                    <label for="option3">😁</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option4" value="😂">
+                    <label for="option4">😂</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile ">
+                <div class="box">
+                    <input type="radio" name="os" id="option5" value="😃">
+                    <label for="option5">😃</label>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option6" value="😍">
+                    <label for="option6">😍</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option7" value="🤩">
+                    <label for="option7">🤩</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option8" value="😮">
+                    <label for="option8">😮</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option9" value="😮">
+                    <label for="option9">😮</label>
+                </div>
+            </div>
+
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option10" value="😲">
+                    <label for="option10">😲</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option11" value="🤔">
+                    <label for="option11">🤔</label>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option12" value="🤪">
+                    <label for="option12">🤪</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option13" value="🤪">
+                    <label for="option13">🤪</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option14" value="🍻">
+                    <label for="option14">🍻</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option15" value="🥂">
+                    <label for="option15">🥂</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option16" value="🚀">
+                    <label for="option16">🚀</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option17" value="🍰">
+                    <label for="option17">🍰</label>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option18" value="👍">
+                    <label for="option18">👍</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option19" value="👎">
+                    <label for="option19">👎</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option20" value="💪">
+                    <label for="option20">👎</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option21" value="🤘">
+                    <label for="option21">🤘</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option22" value="🤜">
+                    <label for="option22">🤜</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option23" value="👊">
+                    <label for="option23">👊</label>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option24" value="👌">
+                    <label for="option24">👌</label>
+                </div>
+            </div>
+            <div class="column is-6-mobile">
+                <div class="box">
+                    <input type="radio" name="os" id="option25" value="💋">
+                    <label for="option25">💋</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-3 webform-container">
+        <div class="columns">
+            <div class="column">
+                <form id="vote-form">
+                    <div class="control has-text-centered">
+                        <button id="form-submit-btn" class="button is-primary is-large submit-button"><span>Send</span> <span class="timer is-hidden"></span></button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
     <script src="./main.js"></script>
 
 </body>
+
 </html>
