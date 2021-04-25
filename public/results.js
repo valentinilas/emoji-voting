@@ -16,7 +16,7 @@ const showResults = (emoji) => {
 
     setTimeout(function() {
         emojiElement.remove();
-    }, 11000)
+    }, 6000)
 }
 
 // Subscribe to events

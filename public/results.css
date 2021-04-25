@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     user-select: none;
-    animation: animateBubble 10s linear forwards, sideWays 3s ease-in-out infinite alternate;
+    animation: animateBubble 5s linear forwards, sideWays 3s ease-in-out infinite alternate;
 }
 
 
