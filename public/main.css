@@ -30,7 +30,30 @@ label {
 }
 
 input:checked+label {
-    background: #00c4a7;
+    background: #000;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.logo-container .logo img {
+    margin-top: 2rem;
+    display: block;
+    max-width: 150px;
+    width: 100%;
+}
+
+.logo-container span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #898989;
 }
 
 @media(max-width:767px) {

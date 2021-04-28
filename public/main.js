@@ -2,12 +2,15 @@
 const form = document.getElementById('vote-form');
 const submitBtn = document.getElementById('form-submit-btn');
 var submitBtnTimer = submitBtn.querySelector('.timer');
+const sendText = submitBtn.querySelector('.send-text');
+const sendAgainText = submitBtn.querySelector('.send-again-text');
 
-var time = 10000;
-var interval;
+let time = 5000;
+let interval;
 
 form.addEventListener('submit', (event) => {
     submitBtn.disabled = true;
+
     const choice = document.querySelector('input[name=os]:checked').value;
     const data = { os: choice };
 
@@ -25,6 +28,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     showTimer();
     submitBtnTimer.classList.remove('is-hidden');
+    sendText.classList.add('is-hidden');
+    sendAgainText.classList.remove('is-hidden');
     interval = setInterval(showTimer, 1000);
 
 });
@@ -33,11 +38,13 @@ form.addEventListener('submit', (event) => {
 function showTimer() {
     if (time === 0) {
         submitBtnTimer.classList.add('is-hidden');
+        sendText.classList.remove('is-hidden');
+        sendAgainText.classList.add('is-hidden');
         submitBtn.disabled = false;
-        time = 10000;
+        time = 5000;
         clearInterval(interval);
         return;
     }
-    submitBtnTimer.innerHTML = `(${time/1000}s)`;
+    submitBtnTimer.innerHTML = `${time/1000}s`;
     time = time - 1000;
 }
