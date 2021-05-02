@@ -5,7 +5,7 @@ var submitBtnTimer = submitBtn.querySelector('.timer');
 const sendText = submitBtn.querySelector('.send-text');
 const sendAgainText = submitBtn.querySelector('.send-again-text');
 
-let time = 5000;
+let time = 1000;
 let interval;
 
 form.addEventListener('submit', (event) => {
@@ -41,7 +41,7 @@ function showTimer() {
         sendText.classList.remove('is-hidden');
         sendAgainText.classList.add('is-hidden');
         submitBtn.disabled = false;
-        time = 5000;
+        time = 1000;
         clearInterval(interval);
         return;
     }

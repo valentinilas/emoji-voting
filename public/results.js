@@ -8,8 +8,14 @@ function randomIntFromInterval(min, max) { // min and max included
 const results = document.getElementById('results');
 const showResults = (emoji) => {
     console.log(emoji);
+
     var emojiElement = document.createElement('div');
-    emojiElement.innerHTML = emoji;
+    if (emoji.indexOf('assets') > -1) {
+        emojiElement.innerHTML = `<img src="${emoji}">`
+    } else {
+        emojiElement.innerHTML = emoji;
+    }
+
     emojiElement.classList.add('emoji-element');
     emojiElement.style.left = randomIntFromInterval(10, 90) + '%';
     results.appendChild(emojiElement);

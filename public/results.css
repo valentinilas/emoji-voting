@@ -1,3 +1,8 @@
+body,
+html {
+    background-color: #04F404;
+}
+
 #results {
     width: 100vw;
     height: 100vh;
