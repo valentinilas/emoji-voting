@@ -15,14 +15,14 @@ html {
     bottom: 0%;
     right: 50%;
     font-size: 2.5rem;
-    width: 75px;
-    height: 75px;
+    width: 30px;
+    height: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     user-select: none;
-    animation: animateBubble 5s linear forwards, sideWays 3s ease-in-out infinite alternate;
+    animation: animateBubble 2s linear forwards, sideWays 1s ease-in-out infinite alternate;
 }
 
 
