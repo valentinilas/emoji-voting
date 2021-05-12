@@ -1,50 +1,61 @@
-// Form submit event
-const form = document.getElementById('vote-form');
-const submitBtn = document.getElementById('form-submit-btn');
-var submitBtnTimer = submitBtn.querySelector('.timer');
-const sendText = submitBtn.querySelector('.send-text');
-const sendAgainText = submitBtn.querySelector('.send-again-text');
+const emojiContainer = document.querySelector('.emoji-container');
+const messageRibbon = document.querySelector('.message-ribbon');
+const timerElement = document.querySelector('.timer');
+const inputs = document.querySelectorAll('input');
+const preview = document.querySelector('.preview');
 
-let time = 1000;
+let time;
 let interval;
+let storageTime = sessionStorage.getItem('time')
 
-form.addEventListener('submit', (event) => {
-    submitBtn.disabled = true;
-
-    const choice = document.querySelector('input[name=os]:checked').value;
-    const data = { os: choice };
-
-    fetch('/poll', {
-            method: 'post',
-            body: JSON.stringify(data),
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-
-    event.preventDefault();
+if (!storageTime || storageTime < 1) {
+    time = 10000;
+} else {
+    time = storageTime;
     showTimer();
-    submitBtnTimer.classList.remove('is-hidden');
-    sendText.classList.add('is-hidden');
-    sendAgainText.classList.remove('is-hidden');
     interval = setInterval(showTimer, 1000);
+}
 
+emojiContainer.addEventListener('change', (event) => {
+    if (event.target.checked) {
+
+        const choice = event.target.value;
+        const data = { os: choice };
+
+        fetch('/poll', {
+                method: 'post',
+                body: JSON.stringify(data),
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+
+        if (choice.indexOf('assets') > -1) {
+            console.log('img');
+            preview.innerHTML = `<img src="${choice}" width="50" height="50"/>`
+        } else {
+            preview.innerHTML = choice;
+        }
+        showTimer();
+        interval = setInterval(showTimer, 1000);
+    }
 });
 
 
 function showTimer() {
+    messageRibbon.classList.remove('is-hidden');
+
     if (time === 0) {
-        submitBtnTimer.classList.add('is-hidden');
-        sendText.classList.remove('is-hidden');
-        sendAgainText.classList.add('is-hidden');
-        submitBtn.disabled = false;
-        time = 1000;
+        messageRibbon.classList.add('is-hidden');
+        time = 10000;
+
         clearInterval(interval);
         return;
     }
-    submitBtnTimer.innerHTML = `${time/1000}s`;
+    timerElement.innerHTML = `${time/1000}`;
     time = time - 1000;
+    sessionStorage.setItem('time', time);
 }
